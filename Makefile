@@ -1,4 +1,4 @@
-Final_project_config_default.html: code/render_report.R \
+Final_project_config_${WHICH_CONFIG}.html: code/render_report.R \
   Final_project.Rmd descriptive_analysis 
 	Rscript code/render_report.R
 
@@ -18,5 +18,7 @@ descriptive_analysis: output/Table1.rds output/boxplot.png
 .PHONY: clean
 clean:
 	rm -f output/*.rds && rm -f output/*.png && rm -f *html
+install:
+	Rscript -e "renv::restore(prompt=FALSE)"
 	
 	
