@@ -13,12 +13,29 @@ output/boxplot.png: code/Box_plot.R output/merged_data.rds
 	
 .PHONY: descriptive_analysis
 descriptive_analysis: output/Table1.rds output/boxplot.png	
-	
+
+
 	
 .PHONY: clean
 clean:
 	rm -f output/*.rds && rm -f output/*.png && rm -f *html
+
+
+.PHONY: report mount-report
+report: 
+	Rscript code/Data_prepare.R
+	Rscript code/Table_descriptive.R
+	Rscript code/Box_plot.R
+	Rscript code/render_report.R
+mount-report:	
+	docker run -v "/$$(pwd)"/report:/project/report final_report4
+
+.PHONY: install 
 install:
 	Rscript -e "renv::restore(prompt=FALSE)"
+
+.PHONY: help
+help: Makefile
+	@sed -n 's/^##//p' Makefile	
 	
 	
