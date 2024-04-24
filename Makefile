@@ -28,7 +28,9 @@ report:
 	Rscript code/Box_plot.R
 	Rscript code/render_report.R
 mount-report:	
-	docker run -v "/$$(pwd)"/report:/project/report final_report4
+	docker run -v "/$$(pwd)"/report:/project/report nati1515/final_report4
+mount-report-mac:
+	docker run -v "$$(pwd)"/report:/project/report nati1515/final_report4
 
 .PHONY: install 
 install:
