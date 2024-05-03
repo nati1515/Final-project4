@@ -27,9 +27,6 @@ P.S: You can remove the rendered .html report and all files in the output folder
 
 -   renders the html report Final_project_config\_\$WHICH_CONFIG.html
 
-Docker Build The Docker image called 'final_project4' is available as a public DockerHub repository [here](https://hub.docker.com/layers/nati1515/final_report4/latest/images/sha256:927d0da9cd10302eeb62f8c948a29034420bb2a67711fc765ceb7168d3c57e40?uuid=3B775E31-23A0-48FD-90D8-215A38E28F2E "here").The Image was built by using the comand `docker build-t final_project4 .`. You call pull the image by using the command `docker pull   nati1515/final_report4. 
+Docker Build The Docker image called 'final_project4' is available as a public DockerHub repository [here](https://hub.docker.com/r/nati1515/final_report4/tags "here").The Image was built by using the comand `docker build-t final_project4 .`. You call pull the image by using the command \`docker pull nati1515/final_report4.
 
-##Docker Run 
-Run the containerized code by using the make command 'make mounted-report` for windows operating system and `make mounted-report-mac` in a bash terminal. This command mounts a local directory called report to the container and retrieves the rendered .html report.
-
-
+##Docker Run Run the containerized code by using the make command 'make mounted-report`for windows operating system and`make mounted-report-mac\` in a bash terminal. This command mounts a local directory called report to the container and retrieves the rendered .html report.
