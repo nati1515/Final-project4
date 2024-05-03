@@ -18,7 +18,7 @@ descriptive_analysis: output/Table1.rds output/boxplot.png
 	
 .PHONY: clean
 clean:
-	rm -f output/*.rds && rm -f output/*.png && rm -f *html
+	rm -f output/*.rds && rm -f output/*.png && rm -f *html 
 
 
 .PHONY: report mount-report
@@ -27,8 +27,10 @@ report:
 	Rscript code/Table_descriptive.R
 	Rscript code/Box_plot.R
 	Rscript code/render_report.R
+	
 mount-report:	
 	docker run -v "/$$(pwd)"/report:/project/report nati1515/final_report4
+	
 mount-report-mac:
 	docker run -v "$$(pwd)"/report:/project/report nati1515/final_report4
 
