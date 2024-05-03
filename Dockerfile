@@ -14,8 +14,6 @@ ENV RENV_PATHS_CACHE renv/.RENV_PATHS_CACHE
 
 RUN R -e "renv::restore()"
 
-## DO NOT EDIT STAGE 1 BUILD LINES ABOVE####
-
 FROM rocker/r-ubuntu
 
 WORKDIR /project
@@ -26,7 +24,7 @@ RUN apt-get install -y pandoc
 
 ENV WHICH_CONFIG="default"
 
-RUN mkdir -p code output data report
+RUN mkdir -p code output data 
 
 COPY code /project/code
 COPY data/Flurosis2.csv /project/data
@@ -35,4 +33,5 @@ COPY config.yml /project
 COPY Final_project.Rmd /project
 COPY README.md /project
 
+RUN mkdir report
 CMD make Final_project_config_${WHICH_CONFIG}.html && mv Final_project_config_${WHICH_CONFIG}.html report
