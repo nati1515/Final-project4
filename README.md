@@ -30,5 +30,5 @@ P.S: You can remove the rendered .html report and all files in the output folder
 ## Docker Build 
 The Docker image called 'final_project4' is available as a public DockerHub repository [here](https://hub.docker.com/r/nati1515/final_report4/tags "here").The Image was built by using the comand `docker build-t final_project4 .`. You can build the image using the `docker build-t final_project4 .` or you call pull the image by using the command \`docker pull nati1515/final_report4.
 
-## Docker Run 
+## Docker Run and making final report
 Run the containerized code by using the make command `make mounted-report`for windows operating system and`make mounted-report-mac` for mac computer in a bash terminal of R terminal. This command mounts a local directory called `report` to the local machine and retrieves the rendered `Final_project_config_$WHICH_CONFIG.html` report in the directory.
