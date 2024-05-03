@@ -4,9 +4,12 @@ This repository contain the files needed to render Final_project_config\_\$WHICH
 
 # Instructions for generating the report
 
-You will need RStudio, bash, and GNU Make to render this report as intended.
+You will need RStudio, bash, GNU MAKE and running docker descktop to render this report as intended.
 
-A. Clone the Final_projct4 repository from GtiHub to a local directory. B. Navigate to the cloned repository. Set this as your working directory. C. Synchronize your local project directroy with the renv.lock file to make sure that your have the correct R packages and versions of this analysis. You can do this by running the command `make install` in the bash shell of Rstudion terminal. D. Type the command `make` in the RStudio terminal with a bash shell to create the components of the report and compile Final_project_config\_\$WHICH_CONFIG.html in your local final_project directory under report folder. Alternatively, open the Makefile to see what make commands are available generating individual components of the report.
+A. Clone the Final_projct4 repository from GtiHub to a local directory.\
+B. Navigate to the cloned repository. Set this as your working directory.\
+C. Synchronize your local project directroy with the renv.lock file to make sure that your have the correct R packages and versions of this analysis. You can do this by running the command `make install` in the bash shell of Rstudio terminal.\
+D. Type the command `make` in the RStudio terminal with a bash shell to create the components of the report and compile Final_project_config\_\$WHICH_CONFIG.html in your local final_project directory under report folder. Alternatively, open the Makefile to see what make commands are available generating individual components of the report.\
 
 P.S: You can remove the rendered .html report and all files in the output folder with the command make clean.
 
@@ -27,8 +30,12 @@ P.S: You can remove the rendered .html report and all files in the output folder
 
 -   renders the html report Final_project_config\_\$WHICH_CONFIG.html
 
-## Docker Build 
-The Docker image called 'final_project4' is available as a public DockerHub repository [here](https://hub.docker.com/r/nati1515/final_report4/tags "here").The Image was built by using the comand `docker build-t final_project4 .`. You can build the image using the `docker build-t final_project4 .` or you call pull the image by using the command \`docker pull nati1515/final_report4.
+## Docker Build
+
+The Docker image called '**final_project4**' is available as a public DockerHub repository [here](https://hub.docker.com/r/nati1515/final_report4/tags "here").The Image was built by using the comand `docker build-t final_project4 .`. You can build the image using the `docker build-t final_project4 .` or you call pull the image by using the command \`docker pull nati1515/final_report4.
 
 ## Docker Run and making final report
-Run the containerized code by using the make command `make mounted-report`for windows operating system and`make mounted-report-mac` for mac computer in a bash terminal of R terminal. This command mounts a local directory called `report` to the local machine and retrieves the rendered `Final_project_config_$WHICH_CONFIG.html` report in the directory.
+
+Run the containerized code by using the make command\
+`make mounted-report` : **for windows operating system and**\
+`make mounted-report-mac`: **for mac computer** in a bash terminal of R terminal.  This command mounts a local directory called `report` to the local machine and retrieves the rendered `Final_project_config_$WHICH_CONFIG.html` report in the directory.
